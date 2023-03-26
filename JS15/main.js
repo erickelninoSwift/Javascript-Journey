@@ -32,9 +32,31 @@ myArrayData.splice(1,1, 333);
 console.log(myArrayData);
 
 const newArray = ['A','B','C','D','E','F','G'];
+const jackArray = [false,34];
+
+const newOne = newArray.join();
+
+console.log(newOne);
+
+console.log(newArray.reverse())
 
 const erickArray = newArray.slice(3);
 
 console.log(erickArray);
 
 
+
+
+
+const theArray1 = ['A','B','C','D'];
+const theArray2 = ['F',false];
+
+const theNewArray = theArray1.concat(theArray2);
+
+
+const theUltimeArray = [...theArray1, ...theArray2];
+
+console.log(theUltimeArray);
+
+
+console.log(theNewArray);
