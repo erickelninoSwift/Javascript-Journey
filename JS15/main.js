@@ -84,7 +84,10 @@ console.log(choloArray[1][1]);
 console.log(jackpotArray[1][2]);
 
 const sportStores = [choloArray,jackpotArray];
+const sportingArray = [sportStores,false,45];
 
 console.log(sportStores[1][0][1]);
 console.log(sportStores[0][0][1]);
+
+console.log(sportingArray[0][1][1][1]);
 
