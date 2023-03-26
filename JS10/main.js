@@ -1,4 +1,5 @@
 let username = prompt("Enter you surname");
+
 console.log(username.trim().length);
 console.log(username.trim());
 if (username.trim().length === 0)
