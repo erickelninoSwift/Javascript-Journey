@@ -60,3 +60,31 @@ console.log(theUltimeArray);
 
 
 console.log(theNewArray);
+
+
+// Multi dimensional Array
+
+
+const equpeShelfA = ["Baseball","Football","VolleyBall"];
+const equpeShelfB = ["Basketball","golf","tennis"];
+
+const clotheShelfA = ["tank tops","t-shirts","jersey"];
+const clotheShelfB = ["sweat tops","sweat pants","hoodies"];
+
+
+
+console.log(equpeShelfA[0]);
+console.log(clotheShelfA[1]);
+
+const choloArray = [equpeShelfA,equpeShelfB];
+const jackpotArray = [clotheShelfA,clotheShelfB];
+
+console.log(choloArray[1][1]);
+
+console.log(jackpotArray[1][2]);
+
+const sportStores = [choloArray,jackpotArray];
+
+console.log(sportStores[1][0][1]);
+console.log(sportStores[0][0][1]);
+
