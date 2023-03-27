@@ -1,49 +1,86 @@
-let playgame = confirm("Shall we play rock , paper, scissors ?");
-console.log(playgame);
 
-if(playgame)
+function initGame()
 {
-while(playgame)
+    let playgame = confirm("Shall we play rock , paper, scissors ?");
+    playgame ? playgames() : alert("Okay , Maybe next time ");
+}
+
+
+const playgames = function()
 {
-   const playerchoice = prompt("Please enter Rock , paper , Scissors ?");
-    if (playerchoice.trim().length > 0)
+    while(true)
     {
-        if(playerchoice.trim().toLowerCase() === "rock".toLowerCase()
-        || playerchoice.trim().toLowerCase() === "papers".toLowerCase()
-        || playerchoice.trim().toLowerCase() === "scisssors".toLowerCase())
-        {
-            const playerOne = playerchoice.trim().toLowerCase();
-          
-                const computerPlayer = Math.floor(Math.random() * 3 + 1);
-                const computer = computerPlayer === 1 ? "rock" : 
-                computerPlayer === 2 ? "paper" : "scissors";
+        const gameArray = ["rock","papers","scissors"];
+    
+       let playerchoice = getPlayerChoice();
 
-                const result = playerOne === computer ? "Tie game!" :
-                playerOne === "rock" && computer === "papers" ? "computer Wins" :
-                playerOne === "papers" && computer === "scissors" ? "Compter Wins" :
-                playerOne === "scissors" && computer === "rock" ? "Computer Wins !" :
-                "Player one Wins!";
+       let theOnePlayerChoice = formatPlayerChoice(playerchoice);
+       if (theOnePlayerChoice === "")
+       {
+            console.log(playerchoice);
+       }
+       
+    }
 
-                alert(result);
+}
 
-                playgame = confirm("Do you want to play again ?");
 
-                if(!playgame) alert("Thanks for playing");
-                continue;
-        }else
-        {
-            alert("you didnt enter rock , papers, scissors");
-            continue;
-        }
+const getPlayerChoice = function()
+{
+    return prompt("Please enter Rock , paper , Scissors ?");
+}
 
+
+const formatPlayerChoice = function(getPlayerChoice)
+{
+    if(getPlayerChoice || getPlayerChoice === "")
+    {
+        return getPlayerChoice.trim().toLowerCase();
     }else
     {
-        alert("I guess you have changed your mind maybe next time");
-        break;
+        return false;
     }
 }
 
-}else
-{
-    alert("Okay , Maybe next time ");
-}
+
+initGame();
+
+
+// function All()
+// {
+//     if (formatPlayerChoice(playerchoice))
+//     {
+//         if(playerchoice.trim().toLowerCase() === gameArray[0].toLowerCase()
+//         || playerchoice.trim().toLowerCase() === gameArray[1].toLowerCase()
+//         || playerchoice.trim().toLowerCase() === gameArray[2].toLowerCase())
+//         {
+//             const playerOne = playerchoice.trim().toLowerCase();
+          
+//                 const computerPlayer = Math.floor(Math.random() * 3 + 1);
+//                 const computer = computerPlayer === 1 ? "rock" : 
+//                 computerPlayer === 2 ? "paper" : "scissors";
+
+//                 const result = playerOne === computer ? "Tie game!" :
+//                 playerOne === "rock" && computer === "papers" ? "computer Wins" :
+//                 playerOne === "papers" && computer === "scissors" ? "Compter Wins" :
+//                 playerOne === "scissors" && computer === "rock" ? "Computer Wins !" :
+//                 "Player one Wins!";
+
+//                 alert(result);
+
+//                 playgame = confirm("Do you want to play again ?");
+
+//                 if(!playgame) alert("Thanks for playing");
+//                 continue;
+//         }else
+//         {
+//             alert("you didnt enter rock , papers, scissors");
+//             continue;
+//         }
+
+//     }else
+//     {
+//         alert("I guess you have changed your mind maybe next time");
+//         break;
+//     }
+// }
