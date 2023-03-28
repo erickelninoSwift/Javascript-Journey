@@ -23,6 +23,7 @@ truck.money = function()
 console.log(truck.money());
 console.log(truck.alive);
 
+<<<<<<< HEAD
 const band = {
     vocals: "Eriik Elnino",
     guitar: "Soprano",
@@ -43,3 +44,26 @@ const myfunction = function({vocals})
 
 console.log(myfunction(band));
 
+=======
+
+const band = {
+    vocals: "Robert plant",
+    guitar : "Jimmy page",
+    bass : "John Paul Jones",
+    drums : "John Bonham"
+}
+
+console.log(band.hasOwnproperty("drums"));
+console.log(Object.keys(band));
+console.log(Object.values(band));
+
+for(let job in band)
+{
+    console.log(band[job]);
+}
+
+
+// Object destructuring 
+const {bass: myVariable} = band;
+alert(myVariable);
+>>>>>>> 1098a10adf1fdcf3bd93d0522310117af2c89463
