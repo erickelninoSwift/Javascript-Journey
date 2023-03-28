@@ -94,3 +94,27 @@ function pizzafactory(pizzabase)
 
 pizzafactory("Thin");
 
+
+
+class myCar
+{
+    #size;
+
+    #carAge = "45";
+
+
+    constructor(carsize)
+    {
+        this.#size = carsize;
+    }
+
+    displayCarsize()
+    {
+        return `My Car size is : ${this.#size} and its ${this.#carAge} years old`;
+    }
+}
+
+const car = new myCar("big sidden")
+
+
+console.log(car.displayCarsize());
