@@ -22,3 +22,24 @@ truck.money = function()
 
 console.log(truck.money());
 console.log(truck.alive);
+
+const band = {
+    vocals: "Eriik Elnino",
+    guitar: "Soprano",
+    Drums : "Michael Jackson",
+    Jazz : "Mike brown"
+}
+
+console.log(band.vocals);
+
+const {Jazz: myVariable } = band;
+
+console.log(myVariable);
+
+const myfunction = function({vocals})
+{
+    return `My Favourite singer is ${vocals}`;
+}
+
+console.log(myfunction(band));
+
