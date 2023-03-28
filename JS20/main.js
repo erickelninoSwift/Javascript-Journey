@@ -13,6 +13,9 @@ const errorMaker = () =>
     }catch(err)
     {
         console.error(err.stack);
+    }finally
+    {
+        console.log("Finaly everything is sorted out");
     }
 }
 
