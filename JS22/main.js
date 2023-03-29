@@ -11,11 +11,29 @@ const h2 = div.querySelector("h2");
 
 console.log(h2);
 
-const doSomething = function()
+const doSomething = (text) =>
 {
-    alert("Hello jackpot here !");
+    alert(`Hello jackpot ${text}`);
 }
 
-h2.addEventListener("click",(e)=>{
-    doSomething();
-});
+const loveMore = () => {
+    return "I am Going to love you more this year ";
+}
+
+const message = loveMore();
+
+// h2.addEventListener("click",doSomething(message),false);
+
+// h2.addEventListener("click",(event) =>{
+//     doSomething(message);
+// })
+
+
+h2.addEventListener("click",(event) =>{
+   
+   event.target.textContent = event.target.textContent === "Jackpot!" ? "Click!" : "Jackpot!";
+})
+
+// h2.addEventListener("click",(e)=>{
+//     doSomething();
+// });
