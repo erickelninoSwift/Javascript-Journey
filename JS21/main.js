@@ -49,4 +49,24 @@ console.log(evenDivs[0].parentElement.children);
 console.log("Node Data : " + evenDivs[0].parentElement.hasChildNodes());
 
 const makeover = evenDivs[0].parentElement.hasChildNodes();
-makeover ? alert("You have child nodes") : console.log("You dont have any child nodes");
+// makeover ? alert("You have child nodes") : console.log("You dont have any child nodes");
+
+
+const firstView = document.querySelector("#view1");
+firstView.style.display = "none";
+const secondView = document.querySelector("#view2");
+secondView.style.display = "flex"
+
+// const heading = secondView.querySelector("h2");
+// heading.textContent = "Hello , Eriik is here!!"
+secondView.style.flexDirection = "row";
+secondView.style.flexWrap = "wrap";
+secondView.style.margin = "10px";
+
+console.log(secondView.lastChild);
+
+while(secondView.lastChild)
+{
+    secondView.lastChild.remove();
+}
+
