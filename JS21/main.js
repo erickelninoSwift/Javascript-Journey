@@ -70,3 +70,14 @@ while(secondView.lastChild)
     secondView.lastChild.remove();
 }
 
+
+const createDivs = function(parent, iteration)
+{
+    const newDiv = document.createElement("div");
+    newDiv.textContent = iteration;
+    newDiv.style.backgroundColor = "black";
+    newDiv.style.color = "white";
+    newDiv.style.height = "100px";
+    newDiv.style.width = "100px";
+    newDiv.style.margin = "10px";
+}
