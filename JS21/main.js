@@ -80,4 +80,15 @@ const createDivs = function(parent, iteration)
     newDiv.style.height = "100px";
     newDiv.style.width = "100px";
     newDiv.style.margin = "10px";
+    newDiv.style.display = "flex";
+    newDiv.style.justifyContent = "center";
+    newDiv.style.alignItems = "center";
+    parent.append(newDiv);
+}
+
+// createDivs(secondView,10);
+
+for(let i = 1; i <= 12;i++)
+{
+    createDivs(secondView,i);
 }
