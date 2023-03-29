@@ -25,7 +25,21 @@ const evenDivs = view1.querySelectorAll("div:nth-of-type(2n)");
 for(let i = 0;i < evenDivs.length;i++)
 {
    evenDivs[i].style.backgroundColor = "red";
-   evenDivs[i].style.width = "120px";
-   evenDivs[i].style.height = "120px";
+//    evenDivs[i].style.width = "120px";
+//    evenDivs[i].style.height = "120px";
 }
+
+
+const navbarText = document.querySelector("nav h1");
+console.log(navbarText);
+navbarText.textContent = "Hello World!";
+
+const navbar = document.querySelector("nav");
+navbar.innerHTML = `<h1> Hello! </h1> <p>This should align right </p>`;
+
+const paragraph = navbar.querySelector("p");
+paragraph.textContent = "This le";
+
+navbar.style.justifyContent = "space-between";
+
 
