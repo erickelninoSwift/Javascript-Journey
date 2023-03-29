@@ -37,9 +37,16 @@ navbarText.textContent = "Hello World!";
 const navbar = document.querySelector("nav");
 navbar.innerHTML = `<h1> Hello! </h1> <p>This should align right </p>`;
 
-const paragraph = navbar.querySelector("p");
-paragraph.textContent = "This le";
 
 navbar.style.justifyContent = "space-between";
 
 
+
+console.log(evenDivs[0]);
+console.log(evenDivs[0].parentElement);
+console.log(evenDivs[0].parentElement.childNodes);
+console.log(evenDivs[0].parentElement.children);
+console.log("Node Data : " + evenDivs[0].parentElement.hasChildNodes());
+
+const makeover = evenDivs[0].parentElement.hasChildNodes();
+makeover ? alert("You have child nodes") : console.log("You dont have any child nodes");
