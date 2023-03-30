@@ -48,16 +48,29 @@ const initApp = () => {
     const h2 = div.querySelector("h2");
 
     view.addEventListener("click",(event) => {
-        view.style.backgroundColor = "red";
-    })
+        
+        view.classList.add("red");
+        view.classList.remove("darkblue");
+        const cuurentClass = document.querySelector(".red");
+        cuurentClass.style.backgroundColor = "red";
+    
+    },false)
 
     div.addEventListener("click",(event) => {
-        div.style.backgroundColor = "blue";
-    })
+        
+        event.stopImmediatePropagation();
+        div.classList.add("yellow");
+        div.classList.remove("black");
+
+        const cuurentClass = document.querySelector(".yellow");
+        cuurentClass.style.backgroundColor = "purple";
+
+    },false)
 
     h2.addEventListener("click",(event) => {
+       
         event.target.textContent = event.target.textContent === "Jackpot!" ? "Clicked!" : "Jackpot!";
 
-    })
+    },false)
 
 };
