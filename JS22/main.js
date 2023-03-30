@@ -2,8 +2,7 @@ const myfirstView = document.querySelector("#view1");
 const secondView = document.querySelector("#view2")
 myfirstView.style.display = "none";
 secondView.style.display = "flex";
-const navbar = document.querySelector("nav");
-navbar.style.display = "none";
+
 
 
 const doSomething = (text) =>
@@ -74,3 +73,10 @@ const initApp = () => {
     },false)
 
 };
+
+const navbar = document.querySelector("nav");
+
+navbar.addEventListener("mouseover",(e) =>{
+    e.stopImmediatePropagation();
+    e.target.classList.add("height100");
+},false);
