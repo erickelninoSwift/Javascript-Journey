@@ -27,4 +27,22 @@ const storagename = "Arraylist";
  console.log(fetchmyStorage);
 
 
+ const listArray = ["Erick","Elnino","Jackpot","Cholo"];
+
+
+ sessionStorage.setItem("myList",JSON.stringify(listArray));
+ const fecthsessionstorage = JSON.parse(sessionStorage.getItem("myList"));
+ console.log(fecthsessionstorage);
+
+
+ const erickArray = ["Playstation 5","Xbox X",false,"Manu"];
+
+ localStorage.setItem("localData", JSON.stringify(erickArray));
+ const getdata = JSON.parse(localStorage.getItem("localData"));
+
+console.log(getdata);
+console.log(getdata[0].toUpperCase());
+
+
+
 
