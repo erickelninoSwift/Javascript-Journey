@@ -23,6 +23,28 @@ truck.money = function()
 console.log(truck.money());
 console.log(truck.alive);
 
+<<<<<<< HEAD
+const band = {
+    vocals: "Eriik Elnino",
+    guitar: "Soprano",
+    Drums : "Michael Jackson",
+    Jazz : "Mike brown"
+}
+
+console.log(band.vocals);
+
+const {Jazz: myVariable } = band;
+
+console.log(myVariable);
+
+const myfunction = function({vocals})
+{
+    return `My Favourite singer is ${vocals}`;
+}
+
+console.log(myfunction(band));
+
+=======
 
 const band = {
     vocals: "Robert plant",
@@ -44,3 +66,4 @@ for(let job in band)
 // Object destructuring 
 const {bass: myVariable} = band;
 alert(myVariable);
+>>>>>>> 1098a10adf1fdcf3bd93d0522310117af2c89463
