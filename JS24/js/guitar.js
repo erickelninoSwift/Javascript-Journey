@@ -1,6 +1,4 @@
 
-console.log("This is the guitar javascript file");
-
 export function playGuitar()
 {
     return "Playing guitar";
