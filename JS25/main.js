@@ -15,3 +15,12 @@ filteredPost.forEach(post =>{
     console.log(post);
     console.log("===============================");
 });
+
+
+const mappedPost = posts.map(post =>{
+    return post.id * 10;
+});
+
+mappedPost.forEach(post => {
+    console.log(post);
+});
