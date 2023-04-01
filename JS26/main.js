@@ -66,6 +66,14 @@ user.then(response =>{
     console.log(data.length);
     console.log(data[0])
 
+    data.forEach(user => {
+        console.log(user["name"]);
+    });
+
 }).catch(err =>{
     console.log(`Error found while fetching data ${err}`);
 });
+
+
+// Asyn and Await 
+console.log("Async and Await");
