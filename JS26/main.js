@@ -52,6 +52,6 @@ myNextPromise.then(value => {
     console.log(`Error found: ${erro}`);
 });
 
-
+console.log("I completly understand this thing");
 
 
