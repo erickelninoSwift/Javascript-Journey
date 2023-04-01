@@ -10,18 +10,48 @@ const myPromise = new Promise((resolve,reject) => {
   }
 });
 
-console.log(myPromise);
+// console.log(myPromise);
 
 const erickPorimise = new Promise((resolve, reject) =>{
 
-    const number = prompt("Please enter your age : ");
+    const number = 5;
     if (number >= 18)
     {
-        resolve("you are very mature")
+        resolve("you are very mature");
     }else
     {
         reject("You are very young");
     }
 });
 
-console.log(erickPorimise);
+erickPorimise.then(value =>{
+
+   return value + "My Friend!!";
+
+}).then(newValue =>{
+
+console.log(newValue);
+
+}).catch(error =>{
+    console.log(`Error found: ${error}`);
+});
+
+
+const myNextPromise = new Promise((resolve, reject) => {
+
+    const number2 = 30;
+    setTimeout(function(){
+        number2 >= 50 ? resolve("You next promise is good") : reject("You are wrong");
+    },3000);
+
+});
+
+myNextPromise.then(value => {
+    console.log(value);
+}).catch(erro =>{
+    console.log(`Error found: ${erro}`);
+});
+
+
+
+
