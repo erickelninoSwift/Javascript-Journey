@@ -24,3 +24,4 @@ const mappedPost = posts.map(post =>{
 mappedPost.forEach(post => {
     console.log(post);
 });
+
