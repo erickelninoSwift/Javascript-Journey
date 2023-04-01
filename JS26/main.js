@@ -54,4 +54,18 @@ myNextPromise.then(value => {
 
 console.log("I completly understand this thing");
 
+// Fetch 
 
+const user = fetch("https://jsonplaceholder.typicode.com/users");
+console.log(user);
+
+user.then(response =>{
+    return response.json();
+}).then(data =>{
+    console.log(data);
+    console.log(data.length);
+    console.log(data[0])
+
+}).catch(err =>{
+    console.log(`Error found while fetching data ${err}`);
+});
