@@ -103,6 +103,21 @@ erickdata().then(() =>{
 });
 
 
-const getAlluserEmail = async () =>{
-    const response = (await fetch("https://jsonplaceholder.typicode.com/users")).json();
+const getAlluserEmail = async () => {
+    const response = await fetch("https://jsonplaceholder.typicode.com/users");
+    const jsonUserdata = await response.json();
+
+    const useremail = jsonUserdata.map(user =>{
+        return user.email;
+    });  
+    postwebPage(useremail);
 }
+
+
+const postwebPage = (data) => {
+ console.log("Ericklnino--------");
+ console.log(data);
+ console.log("Ericklnino--------");
+};
+
+getAlluserEmail();
