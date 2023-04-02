@@ -77,3 +77,27 @@ user.then(response =>{
 
 // Asyn and Await 
 console.log("Async and Await");
+
+const myUser = {
+    userList:[]
+}
+
+const myCoolfunction = async () =>{
+
+    const newuser = await (await fetch("https://jsonplaceholder.typicode.com/users")).json();
+    return newuser;
+};
+
+
+const erickdata = async () =>{
+ const erick = await myCoolfunction();
+ myUser.userList = erick;
+};
+
+// console.log(erickdata());
+erickdata().then(() =>{
+    console.log("*************")
+    const myarrayList = myUser.userList;
+    console.log(myarrayList);
+    console.log("*************")
+});
