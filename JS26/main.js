@@ -101,3 +101,8 @@ erickdata().then(() =>{
     console.log(myarrayList);
     console.log("*************")
 });
+
+
+const getAlluserEmail = async () =>{
+    const response = (await fetch("https://jsonplaceholder.typicode.com/users")).json();
+}
