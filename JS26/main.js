@@ -146,3 +146,16 @@ const getDatajokes = async (jokeObjct) =>{
 getDatajokes(postDadJokes);
 
 
+const requestJokes = async (firstName,lastName) =>{
+
+    const response = await fetch(`http://api.icndb.com/jokes/random?firstName=${firstName}&lastName=${lastName}&limitTo=[nerdy]`);
+    const jokeData = await response.json();
+    console.log(jokeData.value);
+
+};
+
+requestJokes("Bruce","Lee").catch(error =>{
+    console.log(`Error found : ${error}`);
+});
+
+
