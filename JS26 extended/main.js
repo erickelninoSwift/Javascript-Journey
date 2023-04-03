@@ -3,13 +3,13 @@ console.log("Chapter 26 extended Async / Await");
 const myPromise = new Promise((resolve,reject) =>{
 
     const error = false;
-    if(!error)
+    if(error)
     {
         resolve("How are you doing ? My firned ");
-        
+
     }else
     {
-        reject("Error fine!");
+        reject("No rejected the promise !");
     }
 });
 
@@ -27,5 +27,17 @@ myPromise.then(response =>{
 });
 
  console.log(myPromise);
+
+ const myNextPormise = new Promise((resolve,rejected) =>{
+    setTimeout(function(){
+        resolve("How are you doing jackpot ?");
+    },3000);
+ });
+
+myNextPormise.then(result =>{
+   return result + "I am doing very Well";
+}).then(value =>{
+    console.log(value);
+});
 
 
