@@ -155,7 +155,20 @@ const requestJokes = async (firstName,lastName) =>{
 };
 
 requestJokes("Bruce","Lee").catch(error =>{
-    console.log(`Error found : ${error}`);
+    // console.log(`Error found : ${error}`);
 });
+
+
+
+const fetDatafromForm = () =>{
+
+    const requestObject = { 
+        firstName: "Bruce",
+        lastName: "Lee",
+        categoties: [nerdy]
+    };
+
+    return requestObject;
+};
 
 
