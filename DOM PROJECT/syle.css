@@ -1,0 +1,42 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    background-color: lightblue;
+}
+
+.container
+{
+    height: 400px;
+    width: 500px;
+    background-color: white;
+   
+    padding-left: 40%;
+    padding-right: 40%;
+    border-radius: 30px;
+}
+
+.list-items
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: lightcoral;
+    height: 40px;
+    text-align: center;
+    padding-top: 10px;
+    
+}
+
+.list-items li
+{
+   padding: 50px;
+}
+#main-heading
+{
+    text-align: center;
+}
+
