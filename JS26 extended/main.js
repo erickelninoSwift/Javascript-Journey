@@ -144,21 +144,45 @@ const getThatJoke = async (elninoObject) =>{
 
 getThatJoke(jokesObject);
 
-const chucknorrisJokes = async (firtName,lastName) =>{
+// const chucknorrisJokes = async (firtName,lastName) =>{
 
-    const response = await fetch(`https://api.chucknorris.io/jokes/random?firstName=${firtName}&lastName=${lastName}&category=nerdy`);
-    const jokesData = await response.json();
+//     const response = await fetch(`https://api.chucknorris.io/jokes/random?firstName=${firtName}&lastName=${lastName}&categories=nerdy`);
+//     const jokesData = await response.json();
 
 
-    console.log(`ChuckNorris: ${jokesData.value}`);
+//     console.log(`ChuckNorris: ${jokesData.value}`);
 
+// }
+
+
+// chucknorrisJokes("Clint","Eastwood");
+
+
+const getdataFromForm = () =>{
+    const requestObjt = {
+        firstName: "Bruce",
+        lastName: "Lee",
+        categories: "nerdy"
+    }
+
+    return requestObjt;
+}
+
+const createURLRequest = (dataform) =>{
+  return `https://api.chucknorris.io/jokes/random?firstName=${dataform.JSONfirtName}&lastName=${dataform.lastName}&categories=${dataform.categories}`;
 }
 
 
-chucknorrisJokes("Clint","Eastwood");
 
+const chucknorrisJokes = async (url) =>{
 
+    const response = await fetch(url);
+    const jokesData = await response.json();
+    console.log(`FUKUSHIMA: ${jokesData.value}`);
 
+}
+
+chucknorrisJokes(createURLRequest(getdataFromForm()));
 
 
 
