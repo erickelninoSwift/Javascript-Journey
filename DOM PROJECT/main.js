@@ -36,3 +36,35 @@ ul.append(li);
 
 console.log(title.getAttribute(`id`));
 li.remove();
+
+
+
+// DOM Manipulation 
+
+// Traverse the DOM
+
+
+// Parent node Traversal
+
+let myul = document.querySelector(`ul`);
+console.log(myul.parentNode);
+console.log(myul.parentElement);
+
+
+const html = document.documentElement
+console.log(html.parentNode);
+
+// Child node traversal
+
+const erickUl = document.querySelector(`ul`);
+console.log(erickUl.childNodes);
+console.log(erickUl.firstElementChild.textContent);
+console.log(erickUl.lastElementChild.textContent);
+
+erickUl.firstElementChild.style.backgroundColor = `blue`;
+
+
+
+// Sibling Node Traversal
+
+
