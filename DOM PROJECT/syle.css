@@ -49,3 +49,26 @@ body
     text-align: center;
 }
 
+.erickelnino
+{
+    display: flex;
+    width: 600px;
+    align-items: center;
+ 
+}
+.card
+{
+    flex-direction: row;
+    height: 150px;
+    width: 150px;
+    border-style: double;
+    border-width: 2;
+    border-color: aqua;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    margin: 10px;
+
+}
+

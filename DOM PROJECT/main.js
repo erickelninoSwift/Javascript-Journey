@@ -62,9 +62,31 @@ console.log(erickUl.firstElementChild.textContent);
 console.log(erickUl.lastElementChild.textContent);
 
 erickUl.firstElementChild.style.backgroundColor = `blue`;
-
+erickUl.firstElementChild.style.color = 'white';
 
 
 // Sibling Node Traversal
+
+const siblingUL = document.querySelector(`ul`);
+console.log(siblingUL);
+
+
+
+// EVENT LISTENERS
+
+const button1 = document.querySelector(`.btn-1`);
+
+function AlertBtn()
+{
+    alert("Hello jackpot here !!");
+}
+// Event 
+
+// Element add event 
+button1.addEventListener(`click`,(AlertBtn));
+
+
+
+
 
 
