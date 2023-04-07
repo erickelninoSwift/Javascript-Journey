@@ -16,7 +16,7 @@ const Options = ["","","","","","","",""];
 let currentPlayer = "X";
 
 
-const gamePlaying = false;
+let gamePlaying = false;
 
 function init()
 {
@@ -26,13 +26,20 @@ function init()
 
     restartBtn.addEventListener(`click`,(restartGame));
     statusText.textContent = `${currentPlayer} 's Turn`;
+    gamePlaying = true;
 }
 
 
 function cellClicked()
 {
     const index = this.getAttribute("cellIndex");
+    if (Options[index] != "" || !gamePlaying)
+    {
+        return;
+    }
     UpdateCell(this,index);
+    changePlayer();
+    checkWinner();
 }
 
 function restartGame()
@@ -46,8 +53,8 @@ function UpdateCell(cell,index)
 {
     cell.textContent = currentPlayer;
     Options[index] = currentPlayer;
-    console.log(Options);
-    changePlayer();
+   
+   
 }
 
 function changePlayer()
@@ -58,6 +65,17 @@ function changePlayer()
 
 function checkWinner()
 {
-    console.log("Winner is : ?");
+    let roundWon = false;
+    for(let i = 0;i < winCondition.length;i ++)
+    {
+        const condition = winCondition[i];
+        const CellA = Options[condition[0]];
+        const CellB = Options[condition[1]];
+        const CellC = Options[condition[2]];
+
+
+    }
+
 }
+
 init();
