@@ -12,7 +12,7 @@ const winCondition = [
     [0,4,8],
     [2,4,6]
 ]
-const Options = ["","","","","","","",""];
+const Options = ["","","","","","","","",""];
 let currentPlayer = "X";
 
 
@@ -68,12 +68,35 @@ function checkWinner()
     let roundWon = false;
     for(let i = 0;i < winCondition.length;i ++)
     {
-        const condition = winCondition[i];
+        const condition = winCondition[i]; //[0,1,2]
         const CellA = Options[condition[0]];
         const CellB = Options[condition[1]];
         const CellC = Options[condition[2]];
 
+        if(CellA == "" || CellB == "" || CellC == "")
+        {
+            continue;
+        }
 
+        if(CellA == CellB && CellB == CellC)
+        {
+            roundWon = true;
+            break;
+        }
+
+        if(roundWon)
+        {
+            statusText.textContent = `${currentPlayer} wins!`;
+            gamePlaying = false;
+
+        }else if(!Options.includes(""))
+        {
+            statusText.textContent = `Draw!`;
+            gamePlaying = false;
+        }else
+        {
+            changePlayer();
+        }
     }
 
 }
