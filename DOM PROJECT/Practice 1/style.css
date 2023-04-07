@@ -1,0 +1,29 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    max-width: 1076px;
+}
+.block
+{
+    width: 100%;
+    display: flex;
+   
+}
+.right-button
+{
+    height: 200px;
+    width: 70%;
+    padding: 10px;
+    align-content: center;
+    background-color: blue;
+}
+
+.left-button
+{
+   
+    width: 20%;
+    background-color: red;
+    padding-top: 15%;
+}
+

@@ -85,7 +85,24 @@ function AlertBtn()
 // Element add event 
 button1.addEventListener(`click`,(AlertBtn));
 
+// Mouseover
 
+
+const newbackgroundColor = document.querySelector(`.box-1`);
+
+function changeBackgroudColor()
+{
+    newbackgroundColor.style.backgroundColor = `red`;
+}
+
+function backgroundreturn()
+{
+    newbackgroundColor.style.backgroundColor = 'white';
+}
+
+newbackgroundColor.addEventListener('mouseover',(changeBackgroudColor));
+newbackgroundColor.addEventListener(`mouseout`,(backgroundreturn));
+ 
 
 
 
