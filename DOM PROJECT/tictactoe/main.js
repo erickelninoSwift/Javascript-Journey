@@ -13,7 +13,7 @@ const winCondition = [
     [2,4,6]
 ]
 const Options = ["","","","","","","",""];
-const currentPlayer = "X";
+let currentPlayer = "X";
 
 
 const gamePlaying = false;
@@ -38,18 +38,22 @@ function cellClicked()
 function restartGame()
 {
     const asktorestard = confirm("Do you want to restart ?");
-    asktorestard ? cells.forEach(cell =>{cell.textContent = "";}) : console.log("Alright you can carry one");
+    asktorestard ? cells.forEach(cell =>{cell.textContent = ""; currentPlayer = "X";}) : console.log("Alright you can carry one");
+    statusText.textContent = `${currentPlayer} 's Turn`;
 }
 
 function UpdateCell(cell,index)
 {
-    cell.textContent = "X";
-    console.log(index);
+    cell.textContent = currentPlayer;
+    Options[index] = currentPlayer;
+    console.log(Options);
+    changePlayer();
 }
 
 function changePlayer()
 {
-    console.log("Change Player");
+    currentPlayer = currentPlayer === "X" ?  "O" : "X";
+    statusText.textContent = `${currentPlayer} 's Turn`;
 }
 
 function checkWinner()
