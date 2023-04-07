@@ -30,3 +30,39 @@ const number123 = newArray2.map(number =>{
 });
 
 console.log(number123);
+
+
+//Reduce
+
+const newElnino = arrayNumber.reduce((total,number) =>{
+    return total.concat(`Number: ${number}`);
+},[]);
+
+
+const newElnino2 = arrayNumber.reduce((sum,number) =>{
+    return sum + number;
+});
+
+console.log(`Total number is : ${newElnino2}`);
+console.log(newElnino);
+
+
+const users = [
+    {id:1,name:"Eriik",age:40},
+    {id:2,name:"Elnino",age:22},
+    {id:3,name:"Jackpot",age:23},
+    {id:4,name:"Cholo",age:35},
+    {id:5,name:"Yollande",age:90},
+    {id:6,name:"Manu",age:75},
+    {id:7,name:"Anthony",age:40}
+];
+
+const newUserlist = users.filter(user =>{
+    return user.id > 5;
+});
+
+
+newUserlist.forEach(user =>{
+    console.log(user);
+});
+console.log(newUserlist);
