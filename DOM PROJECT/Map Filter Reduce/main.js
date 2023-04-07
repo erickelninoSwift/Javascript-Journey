@@ -65,4 +65,24 @@ const newUserlist = users.filter(user =>{
 newUserlist.forEach(user =>{
     console.log(user);
 });
+
+
 console.log(newUserlist);
+
+
+const changeAge = (id,newAge) =>{
+
+    const currentNewAge = users.map(user =>{
+        if(user.id === id)
+        {
+           return {id: user.id, name:user.name,age: newAge};
+        }else
+        {
+            return user;
+        }
+    });
+
+    return currentNewAge;
+};
+
+console.log(changeAge(5,60));
