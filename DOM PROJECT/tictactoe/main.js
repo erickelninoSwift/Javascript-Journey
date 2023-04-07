@@ -46,7 +46,9 @@ function restartGame()
 {
     const asktorestard = confirm("Do you want to restart ?");
     asktorestard ? cells.forEach(cell =>{cell.textContent = ""; currentPlayer = "X";}) : console.log("Alright you can carry one");
+    Options = ["","","","","","","","",""];
     statusText.textContent = `${currentPlayer} 's Turn`;
+    gamePlaying = true;
 }
 
 function UpdateCell(cell,index)
