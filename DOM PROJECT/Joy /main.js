@@ -92,7 +92,7 @@ const myOrder = (time,work) =>{
 
     return new Promise((resolve,reject) =>{
 
-        if(!is_Wordk_open)
+        if(is_Wordk_open)
         {
             setTimeout(() =>{
                resolve(work());
@@ -128,6 +128,10 @@ myOrder(2000,mywork).then(() =>{
     return myOrder(2000,() =>{
         console.log(`Ice cream was served !!!`);
     });
+})
+
+.catch(() =>{
+    console.log(`There was an error while trying to start cooking`);
 });
 
 // myOrder(2000,function elnino(){
