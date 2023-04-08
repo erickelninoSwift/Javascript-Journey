@@ -92,14 +92,16 @@ const myOrder = (time,work) =>{
 
     return new Promise((resolve,reject) =>{
 
-        if(is_Wordk_open)
+        if(!is_Wordk_open)
         {
             setTimeout(() =>{
+
                resolve(work());
+
             },time);
         }else
         {
-             reject("Unfortunatly work is closed");
+             reject(console.log(`Sorry the shop is closed`));
         }
     });
 };
@@ -132,8 +134,19 @@ myOrder(2000,mywork).then(() =>{
 
 .catch(() =>{
     console.log(`There was an error while trying to start cooking`);
+})
+
+.finally(() =>{
+    setTimeout(() =>{
+        console.log(`Thank you for your time`);
+    },2000);
 });
 
 // myOrder(2000,function elnino(){
 //     console.log(`Erickelnino jackpot!!`);
 // })
+
+
+
+// Async Await 
+
