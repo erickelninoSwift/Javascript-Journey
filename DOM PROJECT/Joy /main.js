@@ -34,17 +34,27 @@ let stocks = {
 let order = (fruits_name,call_production) =>{
 
     setTimeout(() =>{
-         console.log(`Received order : ${fruits_name}`);
+         console.log(`Received order : ${fruits_name} was selected`);
+         call_production();
     },2000);
 
-    setTimeout(() =>{
-        call_production();
-    },4000);
-
+        
 };
 
 let production = () =>{
-    console.log("Your food is ready for Collection!");
+    setTimeout(() =>{
+        console.log("Production has started");
+
+        setTimeout(() =>{
+            console.log("The food have been chopped");
+
+            setTimeout(() =>{
+                console.log(`Add ${stocks.Liquid[0]} & ${stocks.Liquid[1]}`);
+                
+
+            },1000);
+        },2000);
+    });
 };
 
 
