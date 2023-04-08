@@ -25,7 +25,7 @@ let stocks = {
     Fruits:["Mango","Banana","Orange"],
     Liquid:["Milk","Juice","Yoghurt"],
     Food:["Salads","Cucumber","Chicken"],
-    Clothes:["Levis","Daniel hetcher","Louis Vitton"],
+    Cup:["Plate","bowl","Cup"],
     Shoes:["Reebook","Nike","Puma"]
 }
 
@@ -49,9 +49,20 @@ let production = () =>{
             console.log("The food have been chopped");
 
             setTimeout(() =>{
-                console.log(`Add ${stocks.Liquid[0]} & ${stocks.Liquid[1]}`);
-                
+                console.log(`${stocks.Liquid[0]} and ${stocks.Liquid[1]} was added !`);
+                 
+                setTimeout(() =>{
+                    console.log("The machine have been started!!");
+                    setTimeout(() =>{
 
+                        console.log(`The container is : ${stocks.Cup[0]}`);
+
+                        setTimeout(() =>{
+                            console.log(`Toppings : ${stocks.Fruits[2]}`);
+                        },3000);
+
+                    },2000);
+                },1000);
             },1000);
         },2000);
     });
