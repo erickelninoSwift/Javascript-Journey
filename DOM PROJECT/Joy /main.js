@@ -59,6 +59,10 @@ let production = () =>{
 
                         setTimeout(() =>{
                             console.log(`Toppings : ${stocks.Fruits[2]}`);
+
+                            setTimeout(() =>{
+                                console.log("Food is served !");
+                            },2000);
                         },3000);
 
                     },2000);
@@ -70,3 +74,50 @@ let production = () =>{
 
 
 order(stocks.Food[1],production);
+
+
+
+let stockShops = {
+    Fruits:["Mango","Banana","Orange"],
+    Liquid:["Milk","Juice","Yoghurt"],
+    Food:["Salads","Cucumber","Chicken"],
+    Cup:["Plate","bowl","Cup"],
+    Shoes:["Reebook","Nike","Puma"]
+}
+
+
+let is_Wordk_open = false;
+
+const myOrder = (time,work) =>{
+
+    return new Promise((resolve,reject) =>{
+
+        if(!is_Wordk_open)
+        {
+            setTimeout(() =>{
+                resolve(work());
+            },time);
+        }else
+        {
+             reject("Unfortunatly work is closed");
+        }
+    });
+};
+
+const mywork = () =>{
+    return `${stockShops.Fruits[2]} was selected !`;
+};
+
+myOrder(2000,mywork).then(value =>{
+    console.log(value);
+}).catch(error =>{
+    console.log(`Error found : ${error}`);
+});
+
+// myOrder(1000,() =>`${stockShops.Fruits[2]} was selected !`).then(value =>{
+//     console.log(value);
+// });
+
+// myOrder(2000,function elnino(){
+//     console.log(`Erickelnino jackpot!!`);
+// })
