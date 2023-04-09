@@ -53,14 +53,20 @@ const makeAppleJuice = () =>{
 }
 
 
+const erickelnino = async () =>{
+   setTimeout(() =>{
+    console.log("My name is Eriik , I am from congo");
+   },3000);
+}
+
+
 const mysecondJob = async () =>{
     try
     {
         console.log("I am erick");
         console.log("I love to eat Pasta");
-        console.log("With Wine");
-
-        await makeAppleJuice();
+        console.log("What is your name ?");
+        await erickelnino();
 
         console.log("Bonne appetit");
 
